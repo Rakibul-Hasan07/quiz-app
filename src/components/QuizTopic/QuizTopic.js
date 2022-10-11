@@ -8,10 +8,12 @@ const QuizTopic = () => {
     // console.log(quizData.data.questions);
     return (
         <div>
-            <h1>this is quiz topic: {quizes.length}</h1>
-            {
-                quizes.map(quiz => <Quiz key={quiz.id} quiz={quiz}></Quiz>)
-            }
+            <h1 className='my-10 font-bold text-2xl'>Total Quiz: {quizes.length}</h1>
+            <div className='px-20'>
+                {
+                    quizes.map(quiz => <Quiz key={quiz.id} quiz={quiz}></Quiz>)
+                }
+            </div>
         </div>
     );
 };
