@@ -1,5 +1,6 @@
 import Blog from "../Blog/Blog";
 import Cart from "../Cart/Cart";
+import ErrorMessage from "../ErrorMessage/ErrorMessage";
 import QuizTopic from "../QuizTopic/QuizTopic";
 import Root from "../Root/Root";
 import Statics from "../Statics/Statics";
@@ -10,7 +11,7 @@ const { createBrowserRouter } = require("react-router-dom");
 
 export const router = createBrowserRouter([
     {
-        path: '/', element: <Root></Root>, children: [
+        path: '/', element: <Root></Root>, errorElement: <ErrorMessage></ErrorMessage>, children: [
             {
                 path: '/', element: <TopicCart></TopicCart>, loader: () => {
                     return fetch('https://openapi.programming-hero.com/api/quiz')
@@ -26,7 +27,7 @@ export const router = createBrowserRouter([
                     return fetch(`https://openapi.programming-hero.com/api/quiz/${params.topicId}`)
                 }
             },
-           
+
             { path: '/statics', element: <Statics></Statics> },
             { path: '/blog', element: <Blog></Blog> }
         ]
