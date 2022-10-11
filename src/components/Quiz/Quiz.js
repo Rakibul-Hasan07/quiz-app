@@ -14,10 +14,10 @@ const Quiz = ({ quiz }) => {
     const handleClick = (oneQuiz) => {
         console.log(oneQuiz);
         if (oneQuiz === correctAnswer) {
-            toast("WOw Correct Answer!")
+            toast("WOw Correct Answer!", {position:"top-center"})
         }
         else {
-            toast("Oops Wrong Answer!")
+            toast("Oops Wrong Answer!", {position:"top-center"})
         }
     }
     const showCorrectAns = (singleQuiz) => {

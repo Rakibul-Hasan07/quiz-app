@@ -7,7 +7,7 @@ const TopicCart = () => {
     const cartData = useLoaderData();
     const myData = cartData.data;
     return (
-        <div>
+        <div className='bg-slate-100'>
             <div>
                 <Header></Header>
             </div>
