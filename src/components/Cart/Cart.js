@@ -9,7 +9,7 @@ const Cart = ({ cart }) => {
     }
     return (
         <div>
-            <div className="card w-full bg-base-100 shadow-xl rounded-md bg-slate-200">
+            <div className="card w-full bg-base-100 shadow-xl rounded-md bg-slate-300 border">
                 <img src={logo} alt="" />
                 <div className="card-body">
                     <h2 className="card-title py-3 font-bold text-xl">
