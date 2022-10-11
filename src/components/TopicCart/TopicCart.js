@@ -11,7 +11,7 @@ const TopicCart = () => {
             <div>
                 <Header></Header>
             </div>
-            <div className='grid grid-cols-3 gap-8 mx-auto px-40 my-10'>
+            <div className='grid md:grid-cols-2 items-center justify-center lg:grid-cols-3 gap-8 mx-auto px-40 my-10'>
                 {
                     myData.map(cart => <Cart key={cart.id} cart={cart}></Cart>)
                 }

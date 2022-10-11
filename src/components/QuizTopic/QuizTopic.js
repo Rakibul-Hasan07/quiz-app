@@ -1,11 +1,9 @@
-import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import Quiz from '../Quiz/Quiz';
 
 const QuizTopic = () => {
     const quizData = useLoaderData();
     const quizes = quizData.data.questions;
-    // console.log(quizData.data.questions);
     return (
         <div>
             <h1 className='my-10 font-bold text-2xl'>Total Quiz: {quizes.length}</h1>

@@ -5,14 +5,13 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const Quiz = ({ quiz }) => {
     const [correct, setCorrect] = useState([])
-    console.log(correct);
+   
 
     const { question, correctAnswer } = quiz;
 
     const singleQuiz = quiz.options;
 
     const handleClick = (oneQuiz) => {
-        console.log(oneQuiz);
         if (oneQuiz === correctAnswer) {
             toast("WOw Correct Answer!", {position:"top-center"})
         }
@@ -21,22 +20,21 @@ const Quiz = ({ quiz }) => {
         }
     }
     const showCorrectAns = (singleQuiz) => {
-        console.log(singleQuiz);
         const quiz = singleQuiz.find(oQuiz => oQuiz === correctAnswer);
         setCorrect(quiz)
     }
     return (
         <div className='bg-slate-200 rounded-lg my-10 p-10'>
-            <div className='flex justify-between px-5'>
+            <div className='flex justify-between md:px-5'>
                 <h1 className='font-bold text-xl'>Quiz: {question}</h1>
                 <EyeIcon onClick={()=>showCorrectAns(singleQuiz)} className="h-6 w-6 text-blue-500" />
             </div>
-            <div className='grid grid-cols-2'>
+            <div className='grid grid-cols-1 md:grid-cols-2'>
                 {
-                    singleQuiz.map(oneQuiz => <div>
-                        <div className={`border rounded-md border-black m-5 p-5 ${oneQuiz === correct? "bg-pink-200" : undefined}`}>
+                    singleQuiz.map((oneQuiz, idx) => <div key={idx}>
+                        <div className={`border rounded-md border-black my-2 py-2 md:m-5 md:py-4 ${oneQuiz === correct? "bg-pink-200" : undefined}`}>
                             <input type="radio" id="yes" name="choose" value="yes" onClick={() => handleClick(oneQuiz)} />
-                            <label for="yes" className='ml-3'>{oneQuiz}</label>
+                            <label htmlFor="yes" className='ml-3'>{oneQuiz}</label>
                         </div>
                     </div>)
                 }

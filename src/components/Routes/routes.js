@@ -18,6 +18,11 @@ export const router = createBrowserRouter([
                 }
             },
             {
+                path: '/home', element: <TopicCart></TopicCart>, loader: () => {
+                    return fetch('https://openapi.programming-hero.com/api/quiz')
+                }
+            },
+            {
                 path: '/topics', element: <TopicCart></TopicCart>, loader: () => {
                     return fetch('https://openapi.programming-hero.com/api/quiz')
                 }

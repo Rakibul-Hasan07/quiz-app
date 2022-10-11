@@ -33,7 +33,6 @@ const Statics = () => {
                     <Tooltip />
                     <Legend />
                     <Line type="monotone" dataKey="total" stroke="#8884d8" activeDot={{ r: 8 }} />
-                    {/* <Line type="monotone" dataKey="uv" stroke="#82ca9d" /> */}
                 </LineChart>
             </div>
         </div>

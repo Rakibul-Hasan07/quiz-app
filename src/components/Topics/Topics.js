@@ -1,9 +1,9 @@
 import React from 'react';
+import TopicCart from '../TopicCart/TopicCart';
 
 const Topics = () => {
     return (
         <div>
-            <h1>this is topics</h1>
         </div>
     );
 };
